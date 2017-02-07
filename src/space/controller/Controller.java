@@ -1,5 +1,6 @@
 package space.controller;
 
-public class Controller {
+import space.view.SpaceFrame;
 
+public class Controller {
 }
