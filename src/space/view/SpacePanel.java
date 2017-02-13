@@ -18,7 +18,7 @@ public class SpacePanel extends JPanel {
 	
 	public SpacePanel(Controller baseController) {
 	super();
-	setBackground(new Color(25, 25, 112));
+	setBackground(new Color(0, 0, 128));
 	setToolTipText("");
 	setBorder(new CompoundBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null), new BevelBorder(BevelBorder.RAISED, null, null, null, null)));
 	this.baseController = baseController;
@@ -34,50 +34,51 @@ public class SpacePanel extends JPanel {
 	add(scrollPane);
 	
 	JTextArea description = new JTextArea();
-	description.setLineWrap(true);
-	description.setBackground(new Color(0, 191, 255));
 	springLayout.putConstraint(SpringLayout.NORTH, description, 0, SpringLayout.NORTH, scrollPane);
 	springLayout.putConstraint(SpringLayout.WEST, description, 10, SpringLayout.WEST, this);
 	springLayout.putConstraint(SpringLayout.SOUTH, description, -88, SpringLayout.SOUTH, scrollPane);
 	springLayout.putConstraint(SpringLayout.EAST, description, -10, SpringLayout.WEST, scrollPane);
+	description.setLineWrap(true);
+	description.setBackground(new Color(0, 191, 255));
 	description.setText("toString area");
 	description.setRows(20);
 	description.setColumns(1);
 	add(description);
 	
 	JButton up = new JButton("^");
-	springLayout.putConstraint(SpringLayout.NORTH, up, 200, SpringLayout.NORTH, this);
-	springLayout.putConstraint(SpringLayout.WEST, up, 122, SpringLayout.WEST, this);
-	springLayout.putConstraint(SpringLayout.EAST, up, -32, SpringLayout.WEST, scrollPane);
+	up.setBackground(new Color(255, 105, 180));
 	add(up);
 	
 	JButton down = new JButton("v");
-	springLayout.putConstraint(SpringLayout.NORTH, down, 6, SpringLayout.SOUTH, up);
-	springLayout.putConstraint(SpringLayout.WEST, down, 122, SpringLayout.WEST, this);
-	springLayout.putConstraint(SpringLayout.SOUTH, down, -28, SpringLayout.SOUTH, this);
-	springLayout.putConstraint(SpringLayout.EAST, down, 0, SpringLayout.EAST, up);
+	springLayout.putConstraint(SpringLayout.WEST, down, 37, SpringLayout.WEST, this);
+	springLayout.putConstraint(SpringLayout.WEST, up, 0, SpringLayout.WEST, down);
+	springLayout.putConstraint(SpringLayout.SOUTH, up, -6, SpringLayout.NORTH, down);
+	springLayout.putConstraint(SpringLayout.EAST, up, 0, SpringLayout.EAST, down);
+	springLayout.putConstraint(SpringLayout.SOUTH, down, 0, SpringLayout.SOUTH, scrollPane);
+	down.setBackground(new Color(255, 105, 180));
 	add(down);
 	
 	JButton left = new JButton("<");
-	springLayout.putConstraint(SpringLayout.WEST, left, 95, SpringLayout.WEST, this);
+	springLayout.putConstraint(SpringLayout.NORTH, left, 0, SpringLayout.NORTH, down);
+	springLayout.putConstraint(SpringLayout.WEST, left, 0, SpringLayout.WEST, description);
 	springLayout.putConstraint(SpringLayout.EAST, left, -6, SpringLayout.WEST, down);
+	left.setBackground(new Color(255, 105, 180));
 	add(left);
 	
 	JButton right = new JButton(">");
-	springLayout.putConstraint(SpringLayout.NORTH, right, 235, SpringLayout.NORTH, this);
-	springLayout.putConstraint(SpringLayout.WEST, right, 6, SpringLayout.EAST, down);
-	springLayout.putConstraint(SpringLayout.EAST, right, -5, SpringLayout.WEST, scrollPane);
+	springLayout.putConstraint(SpringLayout.WEST, right, 64, SpringLayout.WEST, this);
+	springLayout.putConstraint(SpringLayout.EAST, down, -6, SpringLayout.WEST, right);
+	springLayout.putConstraint(SpringLayout.NORTH, right, 0, SpringLayout.NORTH, down);
+	springLayout.putConstraint(SpringLayout.EAST, right, -90, SpringLayout.WEST, scrollPane);
+	right.setBackground(new Color(255, 105, 180));
 	add(right);
 	
 	JButton btnEnter = new JButton("enter");
-	springLayout.putConstraint(SpringLayout.WEST, btnEnter, 10, SpringLayout.WEST, this);
-	springLayout.putConstraint(SpringLayout.SOUTH, btnEnter, 0, SpringLayout.SOUTH, up);
-	springLayout.putConstraint(SpringLayout.EAST, btnEnter, -47, SpringLayout.WEST, up);
+	springLayout.putConstraint(SpringLayout.WEST, btnEnter, 94, SpringLayout.WEST, description);
+	springLayout.putConstraint(SpringLayout.SOUTH, btnEnter, 0, SpringLayout.SOUTH, scrollPane);
+	springLayout.putConstraint(SpringLayout.EAST, btnEnter, -6, SpringLayout.WEST, scrollPane);
+	btnEnter.setBackground(new Color(0, 191, 255));
 	add(btnEnter);
-	
-	JButton btnNewButton = new JButton("New button");
-	springLayout.putConstraint(SpringLayout.NORTH, left, 206, SpringLayout.SOUTH, btnNewButton);
-	add(btnNewButton);
 	}
 	
 	public void setupPanel()
