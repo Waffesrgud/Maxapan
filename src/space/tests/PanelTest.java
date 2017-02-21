@@ -1,4 +1,4 @@
-package grid.tests;
+package space.tests;
 
 import static org.junit.Assert.*;
 
@@ -10,17 +10,17 @@ import javax.swing.JTable;
 import javax.swing.SpringLayout;
 import javax.swing.JTextField;
 import org.junit.*;
-import grid.controller.GridController;
-import grid.view.GridPanel;
+import space.controller.Controller;
+import space.view.SpacePanel;
 
 public class PanelTest
 {
-	private GridPanel testPanel;
+	private SpacePanel testPanel;
 	
 	@Before
 	public void setUp() throws Exception
 	{
-		testPanel = new GridPanel(new GridController());
+		testPanel = new SpacePanel(new Controller());
 	}
 
 	@After

@@ -93,4 +93,8 @@ public class SpacePanel extends JPanel {
 	{
 		
 	}
+
+	public Object getBaseController() {
+		return baseController;
+	}
 }

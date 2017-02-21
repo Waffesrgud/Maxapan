@@ -1,19 +1,25 @@
-package grid.tests;
+package space.tests;
 
 import static org.junit.Assert.*;
 
 import org.junit.*;
-import grid.controller.GridController;
-import grid.view.GridFrame;
+import space.controller.Controller;
+import space.view.SpaceFrame;
+
+/*
+NOTE: I REPLACED EVERY INSTANCE OF GRID WITH SPACE AND REMOVED SOME GRIDS
+THESE CHANGES ARE MERELY PLATONIC
+NO HARM
+*/
 
 public class ControllerTest
 {
-	private GridController testController;
+	private Controller testController;
 	
 	@Before
 	public void setUp() throws Exception
 	{
-		testController = new GridController();
+		testController = new Controller();
 	}
 	
 	@After
@@ -29,7 +35,7 @@ public class ControllerTest
 		assertTrue("2D Grid needs at least 5 rows", testController.getGrid().length > 4);
 		assertTrue("2D Grid needs at least 5 columns", testController.getGrid()[0].length >= 5);
 		assertNotNull("GUI exists", testController.getFrame());
-		assertTrue("GUI Frame is not of correct type", testController.getFrame() instanceof GridFrame);
+		assertTrue("GUI Frame is not of correct type", testController.getFrame() instanceof SpaceFrame);
 	}
 	
 	@Test

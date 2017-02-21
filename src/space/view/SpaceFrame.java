@@ -10,10 +10,11 @@ public class SpaceFrame extends JFrame
 private Controller baseController;
 private SpacePanel appPanel;
 
-public SpaceFrame()
+public SpaceFrame(Controller baseController)
 {
 	super();
 	this.appPanel = new SpacePanel(baseController);
+	this.baseController = baseController;
 	this.setSize(new Dimension(800,600));
 	this.setTitle("Space V-0.0.1");
 	this.add(appPanel);
@@ -24,12 +25,14 @@ public Controller getBaseController()
 {
 	return baseController;
 }
-public static void main(String[] args) {
-    java.awt.EventQueue.invokeLater(new Runnable() {
-          public void run() {
-               SpaceFrame frame = new SpaceFrame();
-               frame.setVisible(true);
-          }
-    });
+
+public SpacePanel getPanel()
+{
+	return appPanel;
+}
+
+public SpaceFrame getFrame()
+{
+	return this;
 }
 }
