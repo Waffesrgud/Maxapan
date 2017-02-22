@@ -55,7 +55,7 @@ public class Galaxy {
 		String output = "This is a galaxy, to be specific it is of the " + shape + " shape. It's size along an arbitrary x-axis and y-axis is " +
 		Integer.toString(size2) + " x " + Integer.toString(size1)  + ". The center is some massive body that causes even stars to orbit around it.";
 		
-		
+	
 		return output;
 	}
 }
