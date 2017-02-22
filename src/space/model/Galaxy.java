@@ -6,8 +6,10 @@ import java.util.Arrays;
 public class Galaxy {
 	String shape;
 	String name;
+	int size1;
+	int size2;
 	public Galaxy(String shape, int size) {
-		int size2 = size;
+		size2 = size;
 		this.shape = shape;
 		switch(shape)
 		{
@@ -50,7 +52,9 @@ public class Galaxy {
 			System.out.println("The galaxy is not being initialized properly, or it was tampered with!");
 			break;
 		}
-		String output = "This is a galaxy, to be specific it is of the shape " + shape;
+		String output = "This is a galaxy, to be specific it is of the " + shape + " shape. It's size along an arbitrary x-axis and y-axis is " +
+		Integer.toString(size2) + " x " + Integer.toString(size1)  + ". The center is some massive body that causes even stars to orbit around it.";
+		
 		
 		return output;
 	}
