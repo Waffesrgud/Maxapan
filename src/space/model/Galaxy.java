@@ -4,10 +4,10 @@ import java.util.Arrays;
 
 
 public class Galaxy {
-	String shape;
-	String name;
-	int size1;
-	int size2;
+	private String shape;
+	private String name;
+	private int size1;
+	private int size2;
 	public Galaxy(String shape, int size) {
 		size2 = size;
 		this.shape = shape;
@@ -57,5 +57,26 @@ public class Galaxy {
 		
 	
 		return output;
+	}
+	
+	public int getXsize()
+	{
+		return size2;
+	}
+	public int getYsize()
+	{
+		return size1;
+	}
+	public String getName()
+	{
+		return name;
+	}
+	public String getShape()
+	{
+		return shape;
+	}
+	public void setName(String name)
+	{
+		this.name = name;
 	}
 }

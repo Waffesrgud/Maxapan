@@ -3,7 +3,7 @@ package space.model;
 import java.util.Arrays;
 
 public class Universe {
-	Galaxy[][] universeMap;
+	private Galaxy[][] universeMap;
 	
 	public Universe(int size)
 	{
@@ -19,8 +19,9 @@ public class Universe {
 		return output;
 	}
 	
-	public Universe get()
+	public Galaxy[][] get()
 	{
-		return this;
+		return universeMap;
 	}
+	
 }

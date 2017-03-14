@@ -5,11 +5,26 @@ import space.model.*;
 
 public class SolarSystem {
 //This array will only be 1D, due to solar system's lack of solid-ish positioning so it'll just be closest to the sun to longest away
-	
+private Planet [] system;	
+private String starType;
+private int size;
 
 public SolarSystem(int size, String starType)
 {
+	system = new Planet[size];
+	this.starType = starType;
+	this.size = size;
+}
+
+public String toString()
+{
+	String output = "";
+	output += "This is a solar system, with " + size 
+			+ " major bodies orbitting the sun. The star that centers this system is a "
+			+ starType + " type star.";
 	
+	
+	return output;
 }
 
 }
