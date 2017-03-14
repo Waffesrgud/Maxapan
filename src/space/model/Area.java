@@ -1,5 +1,6 @@
 package space.model;
 
-public class Area {
-
+public class Area 
+{
+	
 }
