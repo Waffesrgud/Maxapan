@@ -10,18 +10,20 @@ public PlanetMap(int size)
 	Area[][] map = new Area[size][size];
 }
 
-public Area getArea(int y, int x)
+public Area getAreaFromPole(int y, int x)
 {
-	int X;
-	int Y;
-	for (Y = y; y > map.length; y -= map.length)
+	int Y = y;
+	int X = x;
+	while (Y > map.length)
 	{
-		for (X = x; x > map[0].length; x -= map.length)
-		{
-			
-		}
+		Y -= map.length;
+	}
+	while (X > map[0].length)
+	{
+		X -= map[0].length;
 	}
 	
-	return null;
+	return map[Y][X];
 }
+
 }
