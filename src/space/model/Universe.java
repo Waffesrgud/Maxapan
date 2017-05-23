@@ -2,7 +2,7 @@ package space.model;
 
 import java.util.Arrays;
 
-public class Universe {
+public class Universe implements AntiBigBangGenerator {
 	private Galaxy[][] universeMap;
 	
 	public Universe(int size)

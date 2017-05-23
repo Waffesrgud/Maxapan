@@ -2,7 +2,7 @@ package space.model;
 
 import java.util.Arrays;
 
-public class PlanetMap {
+public class PlanetMap implements AntiBigBangGenerator {
 //It'll still use a 2D array, just with extra rules about accessing elements
 private Area[][] map;
 public PlanetMap(int size)

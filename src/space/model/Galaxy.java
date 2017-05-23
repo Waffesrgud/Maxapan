@@ -3,7 +3,7 @@ package space.model;
 import java.util.Arrays;
 
 
-public class Galaxy {
+public class Galaxy implements AntiBigBangGenerator {
 	private String shape;
 	private String name;
 	private int size1;

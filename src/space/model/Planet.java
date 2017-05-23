@@ -3,7 +3,7 @@ package space.model;
 import java.util.Arrays;
 
 
-public class Planet {
+public class Planet implements AntiBigBangGenerator {
 //Planets are round, so a square array will work it just needs to be distorted so it can be a circle by not using some of the results.
 	private PlanetMap map;
 	private double averageTemp;
